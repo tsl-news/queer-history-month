@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import ReactTypingEffect from 'react-typing-effect';
-import './App.css'
+import './App.css';
 import { ReactComponent as TslSVG } from './assets/images/2021-TSL-Logo-Test_Blue-Splash-copy.svg';
-import { Section, Article, photoFlex } from './components/layout'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import {Article} from './components/layout';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 class App extends Component {
   render() {
