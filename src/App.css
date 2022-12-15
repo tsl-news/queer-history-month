@@ -1,38 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+
 .App {
-  text-align: center;
+    box-sizing: border-box;
+
+    margin: 0 auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    flex-direction: column;
+    /* justify-content: space-between; */
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    color: purple;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+div {
+    flex-basis: 100%;
+    min-height: 35px;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+h1, h2, p {
+    max-width: 50em;
+    line-height: 1.5;
+
+    font-family: 'Libre Baskerville', serif;
+    margin-top: em;
+    margin-bottom: 0.5em;
 }
 
-.App-link {
-  color: #61dafb;
+
+.tsl-logo {
+    padding-top: 1vh;
+    max-width: 55%;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cover {
+    min-height: 100vh;
 }
+
+.cover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+    opacity: 25%;
+}
+
+.title-cont {
+    padding-top: 40vh;
+    z-index: 9999;
+}
+
+.title-cont h1, h2, p {
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+.title {
+    font-size: 6em; 
+    background: linear-gradient(to right, #f64c4a, #ff5722,#f9a825, #43a047,#7e57c2,#f48fb1, #2196f3, #26c6da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.editor-header {
+    max-width: 100%;
+    margin: 0 auto;
+    position: absolute;
+}
+.editor-text {
+    padding-top: 15%;
+    padding-bottom: 45%;
+}
+
+.editor-text p {
+    padding-top: 1.5em;
+}
+
+.editor {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-bottom: 10em; */
+    top: 40vh;
+}
+
+
+.contents {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 40px;
+    padding-bottom: 100vh;
+
+}
+
+.contents::before {
+    content: " ";
+    background-image: url(./assets/images/BookScanCenter_40.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.8;
+}
+
+.contents p {
+    position: relative;
+    color: black;
+    text-decoration: none;
+
+}
+
+.contents p:hover {
+    color:white;
+    text-decoration: none;
+}
+
+.col {
+    text-decoration: none;
+}
+
+.flex-grid {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 40%);
+    column-gap: 230px;
+    grid-template-rows: repeat(4, 25%);
+    row-gap: 1.5em;
+}
+
+
+.article-box {
+    position: relative;
+    flex: 1; 
+    top: 0;
+    padding-top: 5vh;
+    width: 50em;
+
+}
+
+.article-box h1, h2, p { 
+    text-align: left;
+    margin: 0;
+}
+
+.article-box h2 {
+    margin-bottom: 5vh;
+}
+.article-box p {
+    padding-top: 2vh;
+    padding-bottom: 0;
+}
+
+.article-text p {
+    padding-top: 1.5em;
+}
+
+.article-text {
+    padding-bottom: 1.5em;
+}
+
+.transvesta {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 400px;
+    padding-bottom: 160px;
+}
+.transvesta::before {
+    content: " ";
+    background-image: url(./assets/images/transvista.png);
+    background-size: contain;
+    position: absolute;
+    top: 0px;
+    right: -100px;
+    bottom: 0px;
+    left: -100px;
+    opacity: 0.25;
+}
+
+.transvesta p, h1, h2 {
+    position: relative;
+    color: black;
+
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding-top: 250px;
+}
+
+.timeline::before {
+    content: " ";
+    background-image: url(./assets/images/letters.png);
+    background-size: contain;
+    /* background-repeat: no-repeat; */
+    position: absolute;
+    top: 40px;
+    right: -50px;
+    bottom: 0px;
+    left: -50px;
+    opacity: 0.1;
+}
+
+.timeline p, h1, h2 {
+    position: relative;
+    color: black;
+
+}
+  
+.lavender {
+    padding-top: 15vh;
+    width: 100%;
+    background: linear-gradient(197deg, rgba(255,255,255,1) 0%, rgba(230,230,250,1) 100%);
+}
+
+.lav-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-end;
+}
+
+.letter {
+    margin: 0 auto;
+    width: 50%;
+    display: block; 
+    padding-bottom: 5%;
+}
+
+
+.flower {
+    width: 25%;
+}
+
+.lavender p {
+    text-align: center;
+}
+
+.cmc {
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 5%;
+    padding-top: 250px;
+}
+.cmc::before {
+    content: " ";
+    background-image: url(./assets/images/BookScanCenter_1.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 40px;
+    right: -50px;
+    bottom: 0px;
+    left: -50px;
+    opacity: 0.2;
+}
+
+.cmc p, h1, h2 {
+    position: relative;
+    color: black;
+
+}
+
+.canva {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+.canva::before {
+    content: " ";
+    background-image: url(./assets/images/BookScanCenter_46.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: -40px;
+    bottom: 0px;
+    left: -50px;
+    opacity: 0.25;
+}
+
+.canva p, h1, h2 {
+    position: relative;
+    color: black;
+
+}
+
+.dyke {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 180px;
+}
+.dyke::before {
+    content: " ";
+    background-image: url(./assets/images/BookScanCenter_26.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: -40px;
+    bottom: 0px;
+    left: -50px;
+    opacity: 0.25;
+}
+
+.dyke p, h1, h2 {
+    position: relative;
+    color: black;
+
+}
+  
